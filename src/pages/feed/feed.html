@@ -20,32 +20,32 @@
       <ion-avatar item-start>
         <img src="assets/imgs/perfil.png">
       </ion-avatar>
-      <h2 class="feed_title">{{ user_name }}</h2>
-      <p class="feed_date">July 5, 2030</p>
+      <h2 class="feed_title">{{ feed_object.title }}</h2>
+      <p class="feed_date">{{ feed_object.date }}</p>
     </ion-item>
 
     <img src="assets/imgs/feed.png">
 
     <ion-card-content>
-      <p>Happy pug.</p>
+      <p>{{ feed_object.description }}</p>
     </ion-card-content>
 
     <ion-row>
       <ion-col>
         <button ion-button icon-left clear small>
           <ion-icon name="thumbs-up"></ion-icon>
-          <div>12 Likes</div>
+          <div>{{ feed_object.likes }}</div>
         </button>
       </ion-col>
       <ion-col>
         <button ion-button icon-left clear small>
           <ion-icon name="text"></ion-icon>
-          <div>4 Comments</div>
+          <div>{{ feed_object.comments }}</div>
         </button>
       </ion-col>
       <ion-col center text-center>
         <ion-note>
-          11h ago
+          {{ feed_object.timecomment }}
         </ion-note>
       </ion-col>
     </ion-row>
